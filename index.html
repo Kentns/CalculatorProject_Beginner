@@ -72,16 +72,12 @@
       calculator.updateDisplay(7)
       
     }
-    if(e && e.keyCode==(16 && 56)){
-      calculator.chooseOperation('*')
-      calculator.updateDisplay('*')
-      
-    }
     if(e && e.keyCode==56){
       calculator.appendNumber(8)
       calculator.updateDisplay(8)
 
     }
+    
     if(e && e.keyCode==57){
       calculator.appendNumber(9)
       calculator.updateDisplay(9)
@@ -102,7 +98,11 @@
       calculator.updateDisplay('-')
       
     }
-    
+    if(e && e.keyCode==77){
+      calculator.chooseOperation('*')
+      calculator.updateDisplay('*')
+      
+    }
     if(e && e.keyCode==191){
       calculator.chooseOperation('÷')
       calculator.updateDisplay('÷')
