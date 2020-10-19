@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="description" content="Kent's Calculator Project">
+ <meta name="keywords" conetent="HTML, CSS, JavaScript">
+ <meta name="author" content="Kent Tsui">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge, safari, Google Chrome"> 
+ <title>Simple Calculator</title>
+ <link href="style.css" rel="stylesheet">
+ <script type="text/javascript" src="script.js" defer>
+ </script>
+ <script type="text/javascript" language=JavaScript charset="UTF-8">
+  document.onkeydown=function(event){
+    var e = event || window.event || arguments.callee.caller.arguments[0];
+    if(e && e.keyCode==27){
+      calculator.clear()
+      calculator.updateDisplay()
+      // 按 Esc 
+      //要做的事情
+     }
+    if(e && e.keyCode==8){
+      calculator.delete()
+      calculator.updateDisplay()
+      // 按 delete 
+      //要做的事情
+      }      
+    if(e && e.keyCode==13){
+      calculator.compute()
+      calculator.updateDisplay()
+       // enter 键
+       //要做的事情
+    }
+    if(e && e.keyCode==48){
+      calculator.appendNumber(0)
+      calculator.updateDisplay(0)
+      
+    }
+    if(e && e.keyCode==49){
+      calculator.appendNumber(1)
+      calculator.updateDisplay(1)
+      
+    }
+    if(e && e.keyCode==50){
+      calculator.appendNumber(2)
+      calculator.updateDisplay(2)
+      
+    }
+    if(e && e.keyCode==51){
+      calculator.appendNumber(3)
+      calculator.updateDisplay(3)
+      
+    }
+    if(e && e.keyCode==52){
+      calculator.appendNumber(4)
+      calculator.updateDisplay(4)
+      
+    }
+    if(e && e.keyCode==53){
+      calculator.appendNumber(5)
+      calculator.updateDisplay(5)
+      
+    }
+    if(e && e.keyCode==54){
+      calculator.appendNumber(6)
+      calculator.updateDisplay(6)
+      
+    }
+    if(e && e.keyCode==55){
+      calculator.appendNumber(7)
+      calculator.updateDisplay(7)
+      
+    }
+    if(e && e.keyCode==(16 && 56)){
+      calculator.chooseOperation('*')
+      calculator.updateDisplay('*')
+      
+    }
+    if(e && e.keyCode==56){
+      calculator.appendNumber(8)
+      calculator.updateDisplay(8)
+
+    }
+    if(e && e.keyCode==57){
+      calculator.appendNumber(9)
+      calculator.updateDisplay(9)
+      
+    }
+    if(e && e.keyCode==190){
+      calculator.appendNumber('.')
+      calculator.updateDisplay('.')
+      
+    }
+    if(e && e.keyCode==(16 && 187)){
+      calculator.chooseOperation('+')
+      calculator.updateDisplay('+')
+      
+    }
+    if(e && e.keyCode==189){
+      calculator.chooseOperation('-')
+      calculator.updateDisplay('-')
+      
+    }
+    
+    if(e && e.keyCode==191){
+      calculator.chooseOperation('÷')
+      calculator.updateDisplay('÷')
+      
+    }
+  }; 
+  </script>
+</head>
+<body>
+  <div class="calculator-grid">
+    <div class="output">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
+    </div>
+    <button data-all-clear class="span-two">AC</button>
+    <button data-delete>DEL</button>
+    <button data-operation>÷</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>*</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>+</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>-</button>
+    <button data-number>.</button>
+    <button data-number>0</button>
+    <button data-equals class="span-two">=</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Brush Script MT, Georgia, Comic Sans MS, sans-serif;
+    font-weight: normal;
+  }
+/*網頁whole page既內文*/
+  body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #d300fd, #0099ff);
+  }
+
+/*計算機個樣*/
+  .calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+  }
+  
+/*計算機個樣*/
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75); /* .75=透明度*/
+  }
+
+/*滑鼠懸停按鈕個時*/
+  .calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .90); /* .75=透明度*/
+  }
+
+/*將span-two落返定義*/
+.span-two {
+    grid-column: span 2;
+}
+
+/*output個樣*/
+.output{
+    grid-column: 1 / -1; /*砌排位，將output推上頂*/
+    background-color: rgba(0, 0, 0, .75);
+    display: flex; /*將output入面既字排板*/
+    align-items: flex-end; /*貼住最後個位出*/
+    justify-content: space-around; /*內容分開2行*/
+    flex-direction: column; /*跟column方向分開*/
+    padding: 20px; /*內容前空格*/
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
